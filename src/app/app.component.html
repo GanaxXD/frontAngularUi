@@ -20,5 +20,43 @@
     <div class="ui-g-12" style="padding-top: 20px;">
       <button pButton type="button">Pesquisar</button>
     </div>
+
+    <!-- Tabela de dados -->
+    <div class="ui-g" style="padding-top: 50px;">
+      <div class="ui-g-12">
+
+        <p-table [value]="funcionarios"> 
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Pessoa</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Tipo</th>
+              <th>Data de Pagamento</th>
+              <th>Data de Vencimento</th>
+            </tr>
+          </ng-template>
+          
+          <!-- Em vez de fazer o **ngFor="let func of funcionarios"
+              na tag tr, o novo primeng tem a propriedade let- usada na tag ng-template 
+              que permite criar o mesmo efeito do *ngFor, bastando depois
+              do traço indicar o nome da variável.
+              Ex.: let-func
+          -->
+          <ng-template pTemplate="body" let-func>
+            <tr>
+              <td >{{func.pessoa}}</td>
+              <td >{{func.descricao}}</td>
+              <td >{{func.valor}}</td>
+              <td >{{func.tipo}}</td>
+              <td >{{func?.dataPagamento}}</td>
+              <td >{{func.dataVencimento}}</td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+
+
   </div>
 </div>
