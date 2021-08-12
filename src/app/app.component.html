@@ -28,12 +28,13 @@
         <p-table [value]="funcionarios"> 
           <ng-template pTemplate="header">
             <tr>
-              <th>Pessoa</th>
-              <th>Descrição</th>
-              <th>Valor</th>
-              <th>Tipo</th>
-              <th>Data de Pagamento</th>
-              <th>Data de Vencimento</th>
+              <th style="text-align: center;">Pessoa</th>
+              <th style="text-align: center;">Descrição</th>
+              <th style="text-align: center;">Valor</th>
+              <th style="text-align: center;">Tipo</th>
+              <th style="text-align: center;">Data de Pagamento</th>
+              <th style="text-align: center;">Data de Vencimento</th>
+              <th style="text-align: center ; width: 120px;">Ações</th>
             </tr>
           </ng-template>
           
@@ -47,11 +48,18 @@
             <tr>
               <td >{{func.pessoa}}</td>
               <td >{{func.descricao}}</td>
-              <td >{{func.valor}}</td>
+              <td styleClass="col-valor" style="width: 120px; color: blue; text-align: center;">
+                {{func.valor}}
+              </td>
               <td >{{func.tipo}}</td>
-              <td >{{func?.dataPagamento}}</td>
-              <td >{{func.dataVencimento}}</td>
+              <td class="col-data" style="width: 120px; text-align: center;">{{func?.dataPagamento}}</td>
+              <td styleClass="col-data" style="width: 120px; text-align: center;">{{func.dataVencimento}}</td>
+              <td style="text-align: center;" >
+                <a pButton style="width: 30px;" class="pi pi-pencil"></a>
+                <a pButton style="width: 30px;" class="pi pi-trash"></a>
+              </td>
             </tr>
+            
           </ng-template>
         </p-table>
       </div>

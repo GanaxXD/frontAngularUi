@@ -9,6 +9,18 @@ label{
    font-weight: bold;
 }
 
+
+/* Criando a classe com formatação da coluna */
+.col-valor{
+    width: 120px;
+    text-align: right;
+}
+
+.col-data{
+    width: 120px;
+    text-align: center;
+}
+
 /* Para centralizar a tela, criei uma CLASSE
     container que tera a margem (cima e baixo) = 0 e 
     esquerda-direita auto (calculada pelo navegador).

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 
+
 @NgModule({
   declarations: [
     AppComponent
