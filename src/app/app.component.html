@@ -48,15 +48,15 @@
             <tr>
               <td >{{func.pessoa}}</td>
               <td >{{func.descricao}}</td>
-              <td styleClass="col-valor" style="width: 120px; color: blue; text-align: center;">
-                {{func.valor}}
+              <td style="width: 120px; text-align: center;">
+                <span [ngStyle]=" {color: func.tipo === 'DESPESA' ? 'red' : 'blue'} ">{{func.valor}}</span>
               </td>
               <td >{{func.tipo}}</td>
               <td class="col-data" style="width: 120px; text-align: center;">{{func?.dataPagamento}}</td>
               <td styleClass="col-data" style="width: 120px; text-align: center;">{{func.dataVencimento}}</td>
               <td style="text-align: center;" >
-                <a pButton style="width: 30px;" class="pi pi-pencil"></a>
-                <a pButton style="width: 30px;" class="pi pi-trash"></a>
+                <a  style="width: 30px;" class="pi pi-pencil"></a>
+                <a  style="width: 30px;" class="pi pi-trash"></a>
               </td>
             </tr>
             
@@ -65,6 +65,9 @@
       </div>
     </div>
 
+    <div class="ui-g-12" style="padding-top: 20px;">
+      <button pButton type="button">Inserir Registro</button>
+    </div>
 
   </div>
 </div>
